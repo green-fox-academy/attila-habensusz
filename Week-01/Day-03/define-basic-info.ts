@@ -3,13 +3,13 @@ export {};
 
 // Define several things as a variable, then print their values
 // Your name as a string
-let myName = "Atti";
+let myName: string = "Atti";
 
 // Your age as an integer
-let myAge = 23;
+let myAge: number = 23;
 
 // Your height in meters as a float
-let myHeight = 1.73;
+let myHeight: number = 1.73;
 
 // Whether you are married or not as a boolean
-let married = false;
+let married: boolean = false;
