@@ -1,4 +1,5 @@
 'use strict';
+export{};
 
 let shopItems: any[] = ['Cupcake', 2, 'Brownie', false];
 
@@ -8,11 +9,18 @@ let shopItems: any[] = ['Cupcake', 2, 'Brownie', false];
 // Create a function called sweets() which takes the list as a parameter.
 // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
 
-function sweets(a) {
-     a.slice(1, "Croissant", 4, "Ice cream");
-    
+function sweets(list: any[]){
+    return list.map(function(value) {
+        if (value === 2){
+            return "Croissant";
+        }
+        else if( value === false){
+            return "Ice cream";
+        }
+        else {
+            return value;
+        }
+    });
 }
 
 console.log(sweets(shopItems));
-
-export = sweets;

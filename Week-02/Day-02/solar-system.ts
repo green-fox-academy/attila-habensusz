@@ -7,14 +7,14 @@
 let planetList: string[] = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Uranus', 'Neptune'];
 // Expected output: "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn",  "Uranus", "Neptune"
 
-let correctList = planetList.splice(5, 0, "Saturn");
+//let correctList = planetList.splice(5, 0, "Saturn");
 
-/*Somehow the function doesn't work...
+
 function putSaturn(list) {
-     let result = list.splice(5, 0, "Saturn");
-     return result;
-}*/
+     list.splice(5, 0, "Saturn");
+     return list;
+}
 
-console.log(planetList);
+console.log(putSaturn(planetList));
 
 //export = putSaturn;

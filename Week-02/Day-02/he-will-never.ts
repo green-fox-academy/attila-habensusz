@@ -3,7 +3,7 @@
 // Your job is to decode the notSoCrypticMessage by using the hashmap as a look up table
 // Assemble the fragments into the out variable
 
-let out: string = "";
+let output: string = "";
 let notSoCrypticMessage: number[] = [1, 12, 1, 2, 11, 1, 7, 11, 1, 49, 1, 3, 11, 1, 50, 11];
 
 let hashmap = {
@@ -17,9 +17,13 @@ let hashmap = {
   3: 'say goodbye '
 };
 
-let mapKeys = (Object.keys(hashmap));
+for(let i:number = 0;i<notSoCrypticMessage.length;i++){
+  let index:number = notSoCrypticMessage[i];
+  output = output.concat(hashmap[index]);
+}
+
+console.log(output);
 
 
 
 
-console.log(out)
