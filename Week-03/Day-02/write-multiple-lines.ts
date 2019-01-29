@@ -1,21 +1,20 @@
-'use strict'
-export{};
+'use strict';
+export { };
 
-let fs = require('fs');
+const fs = require('fs');
 
-function writeM (path: string, word: string, number: number) {
+const lineCount: number = 5;
+const myString: string = 'alma';
+const myFileName: string = 'my-file.txt';
+
+function writeMultipleLines(path: string, word: string, lines: number) {
     try {
-        let str: string= "";
-        for (let i: 0; i < number; i++) {
-            str += [i];
+        fs.writeFileSync(path, word, 'utf8');
+        for (let i: number = 0; i < lines - 1; i++) {
+            fs.appendFileSync(path, `\n${word}`, 'utf8')
         }
-        fs.readFileSync(path);
-        fs.writeFileSync(path, word);
-         
-            throw new Error ("Unable to write file")
-        
-        
-      } catch (error) {
-        console.log(error.message);
-      }
-    }
+        console.log(fs.readFileSync(path, 'utf8'));
+    } catch (e) { e }
+}
+
+writeMultipleLines(myFileName, myString, lineCount);
