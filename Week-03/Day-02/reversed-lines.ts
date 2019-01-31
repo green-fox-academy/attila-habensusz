@@ -3,15 +3,19 @@ export { };
 
 const fs = require('fs');
 
-let sourceText = fs.readFileSync('reversed-line.txt', 'utf-8');
-
-function reverseLine(text: string) {
-    let str: string = "";
-    for (let i = text.length - 1; i>=0; i--) {
-        str += text[i];
+function reverseLine(fileName: string) {
+    let sourceText = fs.readFileSync(fileName, 'utf-8').split('\r');
+    let arr: string[][] = [];
+    let output: string = '';
+    sourceText.forEach(function(value){
+        arr.push(value.split(''));
+    })
+    for (let i = 0; i < arr.length; i++) {
+        for (let k = (arr[i].length - 1); k >= 0; k--) {
+            output += arr[i][k];
+        }
     }
-    text.split(' ').reverse().join(' ');
-    return str;
+    console.log(output);
 }
 
-console.log(reverseLine(sourceText));
+console.log(reverseLine("reversed-line.txt"));

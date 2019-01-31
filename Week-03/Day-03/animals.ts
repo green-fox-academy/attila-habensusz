@@ -27,3 +27,4 @@ an1.drink();
 an1.play();
 console.log(an1);
 
+export {Animal};
