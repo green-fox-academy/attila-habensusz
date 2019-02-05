@@ -1,6 +1,5 @@
 'use strict';
 
-
 class Pirate {
     name: string
     gold: number
@@ -42,6 +41,7 @@ class Pirate {
     }
 }
 
+/*
 const pirate1 = new Pirate("John", 50, 60, true, false);
 const notCaptain = new Pirate("Simple man", 20, 30, false, false);
 const woody = new Pirate("Pinocchio", 70, 40, false, true);
@@ -49,7 +49,7 @@ pirate1.work();
 notCaptain.party();
 woody.woodenLeg();
 
-console.log(woody);
+console.log(woody);*/
 
 class Ship {
     pirates: Pirate[];
@@ -79,11 +79,21 @@ class Ship {
         }
         return sum
     }
-    lastDayOnTheShip() {
-        
+    lastDayOnTheShip(pirate: Pirate) {
+        pirate.party();
+        console.log("Let's party!")
     }
 
-    prepareForBattle() {
-
+    prepareForBattle(pirate: Pirate) {
+        for (let i = 0; i < 5; i++) {
+            pirate.work();
+        }
+        this.lastDayOnTheShip(pirate)
+        return pirate;
     }
 }
+
+
+const fregatte = new Ship();
+const pirate1 = new Pirate ("John", 8, 5, true, true);
+fregatte.fillShip(pirate1);
