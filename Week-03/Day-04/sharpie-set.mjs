@@ -1,4 +1,4 @@
-import Sharpie from './sharpie.js';
+import { Sharpie } from './sharpie';
 
 class SharpieSet {
     
@@ -48,4 +48,3 @@ mySet.add(sharpie4);
 
 mySet.countUsable();
 mySet.remove();
-alert('Connected');
