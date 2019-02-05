@@ -40,6 +40,8 @@ class Aircraft {
   }
 }
 
-const jet1 = new Aircraft ("F16", 30, 50);
+export {Aircraft};
+
+/* const jet1 = new Aircraft ("F16", 30, 50);
 jet1.isPriority();
-console.log(jet1);
+console.log(jet1); */
