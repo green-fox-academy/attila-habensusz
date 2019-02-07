@@ -46,6 +46,6 @@ let mammal = new Mammal("Seal");
 let bird = new Bird("Eagle");
 
 console.log("How do you breed?");
-console.log("A " + reptile.getName() + " is breeding by " + reptile.breed());
-console.log("A " + mammal.getName() + " is breeding by " + mammal.breed());
-console.log("A " + bird.getName() + " is breeding by " + bird.breed());
+console.log(`A ${reptile.getName()} is breeding by ${reptile.breed()}`);
+console.log(`A ${mammal.getName()} is breeding by ${mammal.breed()}`);
+console.log(`An ${bird.getName()} is breeding by ${bird.breed()}`);
