@@ -2,15 +2,6 @@
 
 import { Plant, Flower, Tree} from './plants';
 
-function initializeGarden(): Plant[]{
-  let plants = [];
-  plants.push(new Flower('yellow'));
-  plants.push(new Flower('blue'));
-  plants.push(new Tree('purple'));
-  plants.push(new Tree('orange'));
-  return plants;
-}
-
 class Garden {
   plants: any[] = [];
 
@@ -43,13 +34,20 @@ class Garden {
         
       }
       })
-
   }
-
-
 }
 
-let secretGarden = new Garden(initializeGarden());
+function gardenMaker(): Plant[]{
+  let plants = [];
+  plants.push(new Flower('yellow'));
+  plants.push(new Flower('blue'));
+  plants.push(new Tree('purple'));
+  plants.push(new Tree('orange'));
+  return plants;
+}
+
+
+let secretGarden = new Garden(gardenMaker());
 secretGarden.waterGarden(0);
 secretGarden.waterGarden(40);
 secretGarden.waterGarden(70);
