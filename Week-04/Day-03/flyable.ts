@@ -15,6 +15,11 @@ abstract class Vehicle {
 }
 
 class Helicopter extends Vehicle implements Flyable {
+
+    constructor(type, speed, price){
+        super();
+    }
+
     land(){
         console.log("We have landed");
     }
@@ -36,6 +41,10 @@ abstract class Animal{
 
   class Bird extends Animal implements Flyable{
     
+    constructor(type, age, gender){
+        super()
+    }
+
     fly(){
         console.log("Repüüüüül")
     }
@@ -49,3 +58,11 @@ abstract class Animal{
     
     }
   }
+
+  let huey = new Helicopter("Huey", 200, 5000);
+  let hawk = new Bird("Hawk", 10, "male");
+
+  huey.takeOff();
+  huey.fly();
+  huey.land();
+  
