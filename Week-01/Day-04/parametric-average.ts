@@ -1,14 +1,20 @@
 'use strict';
+export{}
 
-var firstQ: any = Number(prompt("I need a number"));
-let sum = 0;
+let sum: number = null;
+let numb: number = 5; 
+let addition: number = null;
+let average: number = null;
 
-for (var i = 1; i <= firstQ; i++) {
-    var secondQ = Number(prompt(`Enter a number ${firstQ} times`));
-    
-}
-
-for (var j = 1; j <=i; j++) {
-    sum = sum + secondQ;
+if (numb === undefined || numb == 0) {
+    console.log("Please write a number into the numb variable");
+} else {
+    for (let i: number = 0; i < numb; i++) {
+        addition += (i + 5);
+        sum += addition;
+    }
+    average = sum / numb;
+    console.log(average);
+    console.log(sum);
 }
 

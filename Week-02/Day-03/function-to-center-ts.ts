@@ -11,33 +11,33 @@ const ctx = canvas.getContext('2d');
 // Fill the canvas with lines from the edges, every 20 px, to the center.
 
 function randomColor() {
-	let r = Math.floor(Math.random() * 256);
-	let g = Math.floor(Math.random() * 256);
-	let b = Math.floor(Math.random() * 256);
-	"rgb(r, g, b)"
-	return "rgb(" + r + ", " + g + ", " + b + ")";
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    "rgb(r, g, b)"
+    return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
 
-function drawLine(x1:number, y1:number){
+function drawLine(x1: number, y1: number) {
     ctx.strokeStyle = randomColor();
     ctx.beginPath();
-    ctx.moveTo(x1,y1);
-    ctx.lineTo(300,200);
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(300, 200);
     ctx.stroke();
 }
 
-for (let i:number = 0; i<2;i++){
+for (let i: number = 0; i < 2; i++) {
 
-    for (let j:number = 0; j<600; j+= 20){
-        drawLine(j,i*400);
+    for (let j: number = 0; j < 600; j += 20) {
+        drawLine(j, i * 400);
     }
 
 }
-for (let i:number = 0; i<2;i++){
+for (let i: number = 0; i < 2; i++) {
 
-    for (let j:number = 0; j<400; j+= 20){
-        drawLine(i*600,j);
+    for (let j: number = 0; j < 400; j += 20) {
+        drawLine(i * 600, j);
     }
 
 }

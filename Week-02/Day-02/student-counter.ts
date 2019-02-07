@@ -37,12 +37,3 @@ function ageSum(list: any[]) {
 console.log(ageSum(students));
 
 
-
-/*for (let key in students) {
-    let obj = students[key];
-    for (let prop in obj) {
-       if(obj.hasOwnProperty(prop)){
-         console.log(prop + " = " + obj[prop]);
-       }
-    }
- }*/

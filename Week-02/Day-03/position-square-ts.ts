@@ -11,7 +11,6 @@ const ctx = canvas.getContext('2d');
 // Draw 3 squares with that function.
 // Avoid code duplication.
 
-
 function drawSquare(x:number, y:number){
     let width: number = 50;
     let height: number = 50;

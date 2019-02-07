@@ -9,6 +9,7 @@ let shopItems: any[] = ['Cupcake', 2, 'Brownie', false];
 // Create a function called sweets() which takes the list as a parameter.
 // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
 
+//With .map
 function sweets(list: any[]){
     return list.map(function(value) {
         if (value === 2){
@@ -24,3 +25,16 @@ function sweets(list: any[]){
 }
 
 console.log(sweets(shopItems));
+
+//With foreach
+shopItems.forEach(function(cndy){
+    if (cndy === 2){
+        console.log("Croissant");
+    }
+    else if (cndy === false) {
+        console.log("Ice cream");
+    }
+    else {
+        console.log(cndy)
+    }
+});

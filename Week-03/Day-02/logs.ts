@@ -9,7 +9,7 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
-function getIPAdresses(file:string){
+function getIPAddresses(file:string){
   const arr = file.split('\n').map(value => value.split("   "));
   return arr.map(value => value[1]).filter(onlyUnique);
 }
@@ -22,9 +22,9 @@ function getRatio(file:string){
   return `The GET / POST request ratio is: ${getCount/postCount}`;
 }
 
-console.log(getIPAdresses(myFile));
+console.log(getIPAddresses(myFile));
 console.log(getRatio(myFile));
 
-getIPAdresses(myFile).map(function(value){
+getIPAddresses(myFile).map(function(value){
  return value.split("   ");
 })
