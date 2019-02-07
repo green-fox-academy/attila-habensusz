@@ -12,3 +12,8 @@ test('Get a fibonacci stuff', t => {
   t.notEqual(actual, "", "Don't use string")
   t.end();
 });
+
+test ('Another number', t => {
+    t.equal(fibonacci(5), 8);
+    t.end();
+});
