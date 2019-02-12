@@ -14,7 +14,7 @@ if (numb === undefined || numb == 0) {
         sum += addition;
     }
     average = sum / numb;
-    console.log(average);
     console.log(sum);
+    console.log(average);
 }
 
