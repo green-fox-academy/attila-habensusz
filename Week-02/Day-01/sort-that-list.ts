@@ -34,14 +34,17 @@ function bubble(array:number[], desc: boolean = false) {
 console.log(bubble(theList));
 console.log(bubble(theList,true));
 */
+function bubble (list, bool) {
+    list.sort(function(x, y){
+        if (bool === true){
+            return x - y;
+        }
+        else {
+            return y - x;
+        }
+    });
+    return list;
+}
 
-theList.sort(function(x, y){
-    if (boolean === true){
-        return x - y;
-    }
-    else {
-        return y - x;
-    }
-})
 
-console.log(theList, false);
+console.log(bubble(theList, true));
