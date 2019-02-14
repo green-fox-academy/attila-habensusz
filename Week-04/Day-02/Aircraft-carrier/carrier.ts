@@ -46,9 +46,18 @@ class Carrier {
         anotCarrier.health -= this.damage;
     }
 
-    getStatus() {
-
-    }
+    getStatus(){
+        if (this.health >= 0){
+          let text:string = '';
+          text = `HP: ${this.health}, Aircraft count: ${this.birds.length}, Ammo Storage: ${this.ammoStore}, Total damage: ${this.damage}
+          Aircrafts:`;
+          this.birds.forEach(v=>text+='\n' + v.getStatus());
+          return text;
+        }
+        else {
+            return `It's dead Jim :()`;
+     }
+  }
 }
 
 let jet1 = new F16();
