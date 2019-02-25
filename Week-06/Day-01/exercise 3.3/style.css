@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 80vh;
+  flex-flow: row;
+}
+
+.one {
+  background-color: green;
+  width: 20%;
+  height: 10rem;
+  color: green;
+  margin: 1rem;
+}
+
+.two {
+  background-color: yellow;
+  width: 20%;
+  height: 10rem;
+  color: yellow;
+  margin: 1rem;
+}
+
+.three {
+  background-color: purple;
+  width: 20%;
+  height: 10rem;
+  color: purple;
+  margin: 1rem;
+}
+

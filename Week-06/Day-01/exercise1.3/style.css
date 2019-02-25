@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-flow: row-reverse;
+}
+
+.one {
+  background-color: green;
+  width: 20%;
+  height: 10rem;
+  color: green
+}
+
+.two {
+  background-color: yellow;
+  width: 20%;
+  height: 10rem;
+  color: yellow;
+  flex-grow: 2;
+}
+
+.three {
+  background-color: purple;
+  width: 20%;
+  height: 10rem;
+  color: purple;
+}
+
