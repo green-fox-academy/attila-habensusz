@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>Cocktail list:</h1>
+  <ul>
+    <% cocktails.forEach(function(alcohol){ %>
+      <li>
+        <%= alcohol.name %></</li>
+          <%});%>
+  </ul>
+
+  <ul>
+      <% cocktails2.forEach(function(alcohol){ %>
+        <% if(alcohol === 'gin') {%>
+        <li>
+          <%= alcohol.name %></</li>
+            <%})};%>
+    </ul>
+
+</body>
+
+</html>
