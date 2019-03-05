@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: CreateElement</title>
+  </head>
+  <body>
+    <ul class="asteroids">
+      <li id="b325" class="asteroid">The King</li>
+      <li class="asteroid b326">The Conceited Man</li>
+    </ul>
+    <div class="container"></div>
+
+    <!-- You can work in the html or in a separate js file. Like:
+
+    <script>
+      Add an item that says 'The Green Fox' to the asteroid list.
+
+      Add an item that says 'The Lamplighter' to the asteroid list.
+
+      Add a heading saying 'I can add elements to the DOM!' to the .container.
+
+      Add an image, any image, to the container.
+    </script>
+
+    OR
+
+    <script src="createelement-1.js"></script> -->
+    <script>
+      let asteorids = document.querySelector('ul.asteroids');
+
+      let newLi = document.createElement('li');
+      newLi.innerText = 'The Green Fox';
+      asteorids.appendChild(newLi);
+
+      let newerLi = document.createElement('li');
+      newerLi.innerText = 'The lamplighter';
+      asteorids.insertBefore(newerLi, asteorids.children[0]);
+
+      let heading = document.createElement ('h1');
+      heading.innerText = 'i can add elements to the DOM';
+
+      let container = document.getElementsByClassName('container')[0];
+
+      container.appendChild(heading);
+
+      let imgFox = document.createElement('img');
+
+      imgFox.src = 'https://something.com';
+      imgFox.setAttribute ('width', '150px');
+      container.appendChild(imgFox);
+
+    </script>
+  </body>
+</html>

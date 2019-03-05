@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
   });
 });
 
-/* app.get('/?alcohol={alcholType}', (req, res) => {
+app.get('/?alcohol={alcholType}', (req, res) => {
   const cocktails2 = [
     { name: 'GIN FIZZ', price: 1520, contains: ['gin', 'sugar', 'lemon juice', 'soda'], isAlcoholic: true },
     { name: 'BLOODY MARY', price: 1650, contains: ['vodka', 'tomato juice', 'spices'], isAlcoholic: true },
@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
   res.render('home', {
     cocktails2: cocktails2,
   });
-}); */
+});
 
 // start express app on port 3000
 app.listen(PORT, () => {
