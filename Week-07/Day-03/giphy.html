@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: CreateElement</title>
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+     <style>
+        #container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        
+        img {
+          padding: 2rem;
+          
+        }
+
+        img:hover {
+          cursor: pointer;
+        }
+      </style>
+  </head>
+  <body>
+      <header>
+          
+          </header>
+
+         
+        </header>
+        <div id = "container">
+        </div>
+    <script>
+
+     /*  $.get({
+  url: 'http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=8pccJ3h0kIegwhjo8JC0zL1xIIM596Ka',
+  success: function(result) {
+    let data = result.data;
+    let output = "";
+    for (let index in data){
+    	let gifObject = data[index];
+      let gifURL = gifObject.images.original.url;
+      console.log(gifURL);
+      output += "<img width='30%' src='"+gifURL+"'/>";
+    }
+    $("#container").html(output);
+  },
+}); */
+      let data = "";
+      let ourRequest = new XMLHttpRequest();
+      ourRequest.open('GET','http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=8pccJ3h0kIegwhjo8JC0zL1xIIM596Ka');
+       ourRequest.onload = function() { 
+        data = JSON.parse(ourRequest.responseText);
+        for (let i = 0; i < 16; i++) {
+          let img = document.createElement("img");
+          img.src = data.data[i].images.fixed_height_still.url;
+          img.setAttribute("class", "img");
+          let main = document.querySelector("#container");
+          main.appendChild(img);
+        }
+
+        for (let i = 0; i < 16; i++){
+          let images = document.querySelectorAll(".img");
+          images[i].onclick = () => {
+            images[i].src = data.data[i].images.fixed_height.url;
+          }
+        };
+      };
+      ourRequest.send();
+    </script>
+
+    <!-- document.getElementbyId('output).innerHTML = `<h1>${this.responseText}</h1>`-->
+  
+  </body>
+</html>
+
+
+
