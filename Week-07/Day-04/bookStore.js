@@ -44,6 +44,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/assets/index.html'));
 });
 
+app.get('/listofbooks', (req, res) => {
+  res.sendFile(path.join(__dirname, 'booklist.html'));
+});
+
 
 
 
