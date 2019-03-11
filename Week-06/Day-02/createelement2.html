@@ -45,6 +45,24 @@
           asteroid: true,
         },
       ];
+
+      let ul = document.getElementsByTagName('ul')[0];
+      let childRemove = ul.children[0];
+      ul.removeChild(childRemove);
+
+      let asteroidList = [];
+      planetData.forEach(element => {
+        if(element.asteroid === true){
+          asteroidList.push(element.content)
+        };
+      })
+
+      for (let i = 0; i < asteroidList.length; i++) {
+        let asteroid = document.createElement('li');
+        asteroid.setAttribute('class', planetData[i].category)
+        asteroid.innerText = asteroidList[i];
+        ul.appendChild(asteroid);
+      }
     </script>
 
     

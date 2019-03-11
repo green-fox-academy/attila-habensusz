@@ -45,9 +45,10 @@
     $("#container").html(output);
   },
 }); */
-      let data = "";
+      
       let ourRequest = new XMLHttpRequest();
       ourRequest.open('GET','http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=8pccJ3h0kIegwhjo8JC0zL1xIIM596Ka');
+      let data = "";
        ourRequest.onload = function() { 
         data = JSON.parse(ourRequest.responseText);
         for (let i = 0; i < 16; i++) {

@@ -5,7 +5,8 @@ document.getElementById('button2').addEventListener('click', loadCustomer);
 function loadCustomer(e) {
   const xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'customer.json');
+  xhr.open('GET', 'customer.json', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
 
   xhr.onload = function() {
     if(this.status === 200) {
