@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(59, 64, 83);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+i {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: rgb(49, 51, 56);
+  width: 3.5rem;
+  height: 3rem;
+  text-align: center;
+}
+
+.one, .two, .three {
+  padding-top: 20px;
+}
+
+.one {
+  color: white;
+}
+
+.two {
+  color: red;
+  visibility: hidden;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
+
+.three {
+  color: green;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.one:hover ~ i {
+  visibility: visible;
+  opacity: 1;
+  
+}
+
+.permahover {
+  visibility: visible;
+  opacity: 1;
+}
+
+

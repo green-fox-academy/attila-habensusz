@@ -1,0 +1,34 @@
+* {
+  font-size: 1.7rem;
+}
+
+body {
+  background: rgb(77, 77, 253);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+table {
+  width: 70vw;
+  border: 4px solid black;
+  border-radius: 12px;
+}
+
+tr:nth-child(even) {
+  background: #ccc;
+}
+
+
+th {
+  background: black;
+  color: white;
+}
+
+td[data-currency]::before {
+  content: "$ ";
+}
