@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  
+</head>
+<body>
+  
+    <div class = "container">
+      <div class ="main-text">
+          <h1>Movie selector</h1>
+      </div>
+  
+  <form action='/movie' method="post">
+    <select id="myform" class ="left">
+        <option value="select">Select a genre</option>
+        <option value="scifi">Sci-fi</option>
+        <option value="drama">Drama</option>
+        <option value="comedy">Comedy</option>
+      </select>
+      <select id="tohide" class ="right">
+          <option value="moon">Moon</option>
+          <option value="space">2001: Space odyssey</option>
+          <option value="contact">Contact</option>
+          <option value="darkest">Darkest Hour</option>
+          <option value="blood">There will be blood</option>
+          <option value="beuty">American beauty</option>
+          <option value="airplane">Arplane!</option>
+          <option value="deadpool">Deadpool</option>
+          <option value="wayne">Wayne's World</option>
+        </select>
+        <div class ="selected-movie">
+          <h3>The selected movie is: -</h3>
+        </div>
+
+    
+  <!-- <div class = "btn">
+    <button id ="cats-btn" type="submit" disabled ="disabled">Love cats</button>
+    <button id ="sign-up-btn" type="submit" disabled ="disabled">Sign up</button>
+</div> -->
+  </div>
+
+  </form>
+
+
+
+<script src="main.js"></script>
+
+</body>
+</html>

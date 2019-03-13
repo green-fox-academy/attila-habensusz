@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background: rgb(97, 95, 95);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  width: 40vw;
+  background: white;
+  line-height: 3rem;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+h1 {
+  color: rgb(122, 122, 122);
+  font-size: 26px;
+  text-align: left;
+}
+
+input, label {
+  display: block;
+}
+
+label[for="showpwd"], input[type="checkbox"] {
+  display: inline;
+}
+
+.main-text {
+  padding-right: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+p {
+  text-align: right;
+}
+
+button {
+  border: none;
+  border-radius: 18px;
+  display:inline-block;
+  letter-spacing: 1px;
+	cursor:pointer;
+	color:white;
+	font-size:12px;
+	padding:12px 16px;
+	text-decoration:none;
+ 
+  background: rgb(58, 57, 57);
+}
+
+form {
+  margin: 1rem 0;
+}
+
+input {
+  height: 26px;
+  width: 15rem;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+input:focus {
+  border: 2px solid green;
+}
+
+
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  
+}
+
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  
+}
+
