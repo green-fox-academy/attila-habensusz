@@ -6,6 +6,8 @@
   <title>Login form</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   
 </head>
 <body>
@@ -22,7 +24,8 @@
     </div>
   <div>
       <label for="password">PASSWORD</label>
-      <input type ="password" id="password" name ="password" placeholder="Your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><label for="showpwd">Show password</label> <input type="checkbox" id="showpwd">
+      <input type ="password" id="password" name ="password" placeholder="Your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><span
+      toggle="#password-field" id="showpwd" class="fa fa-fw fa-eye field-icon toggle-password"></span><!-- <label for="showpwd">Show password</label> <input type="checkbox" id="showpwd"> -->
       <p><a href="#">Forgot password?</a></p>
   </div>
   <div class = "btn">
@@ -31,9 +34,9 @@
   </div>
 
   <div id="message">
-      <h3>Password must contain the following:</h3>
+      <h3>Your password must contain the following:</h3>
+      <p id="capital" class="invalid">An <b>uppercase</b> letter</p>
       <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-      <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
       <p id="number" class="invalid">A <b>number</b></p>
       <p id="length" class="invalid">Minimum <b>8 characters</b></p>
     </div>
