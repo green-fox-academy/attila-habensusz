@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>/r/space</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+</head>
+<body>
+  <header id="main-header">
+    <i class="fab fa-reddit">reddit</i>
+    <div class ="choose-subreddit">
+      <select class="choose-subreddit-select">
+        <option value="space">r/space</option>
+        <option value="askreddit">r/AskReddit</option>
+        <option value="aww">r/awww</option>
+        <option value="dunder">r/DunderMifflin</option>
+      </select>
+    </div>
+    <div class ="drop-down">
+      <label for="search"><i class="fas fa-search"></i></label>
+      <input type="search" id="search" placeholder="Search r/space">
+    </div>
+    <div class ="icons">
+        <i class="fas fa-angle-right"></i>
+        <i class="fas fa-signal"></i>
+        <i class="far fa-bookmark"></i>
+    </div>
+    <div class ="post-related">
+        <i class="fas fa-comment"></i>
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-pencil-alt"></i>
+    </div>
+    <div class ="user-dropdown">
+        <i class="fas fa-user-alt"></i>
+        <select class ="user-select">
+            <option value="profile">My profile</option>
+            <option value="settings">User settings</option>
+            <option value="logout">Log out</option>
+          </select>
+    </div>
+  </header>
+    <div class ="subreddit-background">
+      <h1>SPACE</h1>
+    </div>
+    <div id ="main-content">
+        <form action='/login' method="post">
+          <div>
+              <label for="username">USERNAME</label>
+              <input type ="text" id="username" name ="user" placeholder="Your username" autofocus pattern = ".{3,}" required title = "3 character minimum">
+          </div>
+        <div>
+            <label for="password">PASSWORD</label>
+            <input type ="password" id="password" name ="password" placeholder="Your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><span
+            toggle="#password-field" id="showpwd" class="fa fa-fw fa-eye field-icon toggle-password"></span><!-- <label for="showpwd">Show password</label> <input type="checkbox" id="showpwd"> -->
+            <p><a href="#">Forgot password?</a></p>
+        </div>
+        <div class = "btn">
+          <button type="submit">Login</button>
+      </div>
+
+    </div>
+
+  
+
+
+  <script src="main.js"></script>
+</body>
+</html>
