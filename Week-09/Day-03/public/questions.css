@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 200vh;
+  background: rgb(212, 216, 218);
+  margin: 1rem 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  width: 70vw;
+  background: #FFFFFF;
+  line-height: 3rem;
+  overflow: auto;
+  border-radius: 14px;
+  /* padding-bottom: 2rem; */
+  padding: 2rem 2rem;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  border-bottom: 3px solid #D9DDDF;
+  width: 100%;
+  padding: 1rem 0;
+}
+.main-text {
+  padding-right: 1rem;
+  margin: 1rem 0;
+}
+.main-area {
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.main-area li {
+  border-bottom: 1px solid #D9DDDF;
+  
+}
+
+.main-area li:nth-of-type(3) {
+  border-bottom: none;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 60vh;
+  width: 70vw;
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+li, input {
+  font-size: 1.5rem;
+}
+
+
+p {
+  font-size: 1.5rem;
+}
+
+
+button {
+  font-size: 2rem;
+  padding: 1rem;
+  width: 22vw;
+  background: #3498DB;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+input:focus {
+  border: 2px solid green;
+}
+
+
+#message {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+  padding: 20px;
+  margin-top: 12px;
+
+}
+
+
+.button {
+  background: #3498DB;
+  width: 20vw;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: black;
+}
+
+
+#score {
+  margin-bottom: 1rem;
+}
+
+#question-manager {
+  margin-top: 1rem;
+}
+
+.answers {
+  width: 40vw;
+  padding: 2rem;
+}
+
+.answers div {
+  margin: 1rem 0;
+  border-bottom: 1px solid #D9DDDF;
+}
+
+.answers input {
+  margin-left: 1rem;
+}
+
+.typeQuestion {
+  width: 50vw;
+}
+
+span {
+  margin-left: 4rem;
+}
