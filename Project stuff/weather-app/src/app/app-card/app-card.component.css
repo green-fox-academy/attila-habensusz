@@ -1,0 +1,40 @@
+.card {
+  background: #FFFFFF;
+  width: 40vw;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #34497D;
+  border-radius: 13px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+  font-size: 27px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.city-info {
+  text-align: center;
+}
+
+.temprature {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+img {
+  font-size: 25px;
+  height: 200px;
+}
+
+.temperature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
