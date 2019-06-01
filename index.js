@@ -1,1 +1,1 @@
-let post = 5;
+const post1 = 10;
