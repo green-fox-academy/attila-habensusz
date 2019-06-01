@@ -1,1 +1,5 @@
-const post1 = 10;
+function getPost(post) {
+  console.log(post)
+}
+
+console.log(getPost('post'));
