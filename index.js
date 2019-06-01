@@ -1,5 +1,7 @@
-function getPost(post) {
-  console.log(post)
+function getOnePost(post) {
+  if(post > 1) {
+    console.log(post)
+  }
 }
 
-console.log(getPost('post'));
+console.log(getOnePost('post'));
