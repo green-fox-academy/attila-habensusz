@@ -1,5 +1,5 @@
-function getPost(post) {
-  console.log(post)
+function getAllPosts(posts) {
+  console.log(posts)
 }
 
-console.log(getPost('post'));
+console.log(getPosts('posts'));
