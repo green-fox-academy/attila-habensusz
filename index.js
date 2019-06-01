@@ -1,1 +1,1 @@
-let post;
+let post = 5;
